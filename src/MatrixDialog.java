@@ -43,13 +43,13 @@ public class MatrixDialog {
 		frame = new JFrame();
 		frame.setBounds(100, 100, 1284, 700);
 		frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
-		frame.setResizable(false);
+		
 		
 		JTextArea textArea = new JTextArea();
 		textArea.setFont(new Font("Monospaced", Font.PLAIN, 14));
-		textArea.setLineWrap(true);
 		textArea.setText(matrix);
 		textArea.setEditable(false);
+		textArea.setLineWrap(true);
 		frame.getContentPane().add(textArea, BorderLayout.CENTER);
 		frame.addWindowListener(new WindowAdapter() {
 			@Override
