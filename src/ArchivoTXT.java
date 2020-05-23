@@ -49,7 +49,7 @@ public class ArchivoTXT {
 	 * @return
 	 */
 	public static ArrayList<Relacion> getRelaciones() {
-		String path = "guategrafo.txt";//getPath();
+		String path = getPath();
 		File archivo = new File(path);
 		FileReader fr;
 		BufferedReader br;
