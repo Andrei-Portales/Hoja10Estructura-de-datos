@@ -21,10 +21,18 @@ public class Controller {
 		alteraciones = new ArrayList<Alteracion>();
 	}
 	
+	/**
+	 * metodo que retorna la lista de las alteraciones que se realizaron
+	 * @return
+	 */
 	public Alteracion[] getAlteraciones() {
 		return alteraciones.toArray(new Alteracion[alteraciones.size()]);
 	}
 	
+	/**
+	 * metodo para obtener la matriz
+	 * @return
+	 */
 	public String getMatrix() {
 		String matris = "";
 		
@@ -36,6 +44,10 @@ public class Controller {
 		return matris;
 	}
 	
+	/**
+	 * metodos para cambiar la alteracion y asi volver a meter la ruta al grafo
+	 * @param alteracion
+	 */
 	public void changeAlteracion(Alteracion alteracion) {
 		for (int i = 0;i<alteraciones.size();i++) {
 			if (alteraciones.get(i).equals(alteracion)) {
@@ -48,6 +60,10 @@ public class Controller {
 	}
 	
 	
+	/**
+	 * Metodo para alterar las rutas del grafo
+	 * @param alteracion
+	 */
 	public void setAlteracion(Alteracion alteracion) {
 		for (int i =0;i<relaciones.size();i++) {
 			if (relaciones.get(i).equals(alteracion.getRelacion())) {
@@ -191,6 +207,10 @@ public class Controller {
 		
 	}
 	
+	/**
+	 * Metodo para obtener el centro del grafo
+	 * @return
+	 */
 	public String getCenter() {
 		//crearMatriz();
 		return mapa.get(Logica.graphCenter(matrix)+"");
@@ -212,7 +232,10 @@ public class Controller {
 	}
 	
 	
-	
+	/**
+	 * Metodo que retorna las ciudades actuales las cuales se leyeron en el txt
+	 * @return
+	 */
 	public String[] getCiudades() {
 		return ciudades.toArray(new String[ciudades.size()]);
 	}
@@ -236,7 +259,7 @@ public class Controller {
 			}
 		}
 		
-		return 10000000;
+		return Long.MAX_VALUE;
 	}
 	
 	/**
@@ -266,7 +289,11 @@ public class Controller {
 		return null;
 	}
 	
-	
+	/**
+	 * Metodo para obtener la distancia en total de todos los nodos
+	 * @param lugares
+	 * @return
+	 */
 	public String getDistance(String[] lugares) {
 		long distancia = 0;
 		int pre = 0;

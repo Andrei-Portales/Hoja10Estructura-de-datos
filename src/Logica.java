@@ -129,7 +129,7 @@ import javax.swing.JOptionPane;
                     summation.add(matriz[i][iterationCounter]);
                 }
                 for(Long l: summation){
-                    if((l <= 10000000) && (l != 0)){
+                    if((l <= Long.MAX_VALUE) && (l != 0)){
                         if(l > max){
                             max = l;
                         }

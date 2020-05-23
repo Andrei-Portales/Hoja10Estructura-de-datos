@@ -1,4 +1,10 @@
 
+
+/*
+ *  Clase que modela una alteracion 
+ */
+
+
 public class Alteracion {
 	
 	private String causa;

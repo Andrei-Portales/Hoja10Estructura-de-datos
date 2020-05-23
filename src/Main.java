@@ -62,7 +62,7 @@ public class Main implements DialogChange.DataReceive,AddDataDialog.addData,Alte
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		
+	
 		control = new Controller();
 		frame = new JFrame();
 		frame.getContentPane().setBackground(Color.WHITE);
